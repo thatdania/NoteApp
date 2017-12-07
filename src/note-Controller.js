@@ -14,11 +14,8 @@
   var noteListView = new NoteListView(this.controlist);
   var render = noteListView.html()
   var final = document.getElementById('app');
-  final.innerHTML =  render;
+  final.innerHTML = render;
 }
-
-
-
 
 exports.NoteController = NoteController
 })(this);
