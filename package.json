@@ -1,0 +1,22 @@
+{
+  "name": "noteapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thatdania/NoteApp.git"
+  },
+  "author": "Dania",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thatdania/NoteApp/issues"
+  },
+  "homepage": "https://github.com/thatdania/NoteApp#readme",
+  "dependencies": {
+    "http-server": "^0.10.0"
+  }
+}
