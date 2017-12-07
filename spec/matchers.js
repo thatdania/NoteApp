@@ -27,7 +27,7 @@ var assert = {
     if(value1 === value2){
       console.log(describe)
     } else {
-      throw new Erroe("assertion failed:" + value1 + "does not equal to" + value2)
+      throw new Error("assertion failed:" + value1 + "does not equal to" + value2)
     }
   }
 };
