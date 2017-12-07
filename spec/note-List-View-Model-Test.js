@@ -9,7 +9,7 @@
   };
 
   NoteListDouble.prototype = {
-    addnote: function(string){
+    addnote: function(string = null){
       var noteDouble= new NoteDouble(string);
       this.list.push(noteDouble)
     },
@@ -33,6 +33,12 @@
     var describe = "NoteListView returns string as HTML"
     assert.isEqual(describe, notelistView.html(),"<li><div> sillybutbillykadoodl </div></li>")
   };
+  //
+  // function noteListViewreturnsnonote(){
+  //   var describe = "NoteListView returns string as HTML"
+  //     notelistDouble.addnote()
+  //   assert.isEqual(describe, notelistView.html(),"<li><div></div></li>")
+  // };
 
 noteListViewtakesnoteListArray();
 noteListViewreturnsStringasHTML();

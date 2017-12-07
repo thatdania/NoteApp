@@ -10,9 +10,9 @@
     for(var i = 0; i < unhashlist.length; i++){
         htmlist.push("<li><div> " + unhashlist[i].note.substring(0,20) + " </div></li>")
     }
-    var x =  htmlist.join(' ');
-    console.log(x)
-    return x
+    var final =  htmlist.join(' ');
+    console.log(final)
+    return final
   };
 
 
