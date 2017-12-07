@@ -2,7 +2,6 @@
 
   function NoteListView(noteList){
     this.viewlist = noteList
-    console.log(this.viewlist)
   }
 
   NoteListView.prototype.html = function(){

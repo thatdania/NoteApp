@@ -31,7 +31,6 @@
 
   function noteListViewreturnsStringasHTML(){
     var describe = "NoteListView reutns string as HTML"
-    notelistDouble.addnote('hello')
     notelistDouble.returnallnotes();
     assert.isTrue(describe, notelistView.html(),"<li><div>hello</div></li>")
   };

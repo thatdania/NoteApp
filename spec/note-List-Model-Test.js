@@ -9,12 +9,11 @@
   function NoteListStoresNote(){
     var describe = "NoteList stores Notes"
     noteList.addnote('hello')
-    assert.isTrue(describe, noteList.list[0].text, 'hello' )
+    assert.isTrue(describe, noteList.list[0], 'hello' )
   };
 
   function NoteListReturnsAllNote(){
    var describe = "NoteList returns all Notes"
-   noteList.addnote('hello')
    assert.isTrue(describe, noteList.returnallnotes(), 'hello')
   };
 
