@@ -8,9 +8,11 @@
     var htmlist = [];
     var unhashlist = this.viewlist.list
     for(var i = 0; i < unhashlist.length; i++){
-        htmlist.push("<li><div> " + unhashlist[i].note + " </div></li>")
+        htmlist.push("<li><div> " + unhashlist[i].note.substring(0,20) + " </div></li>")
     }
-    return htmlist.join(' ');
+    var x =  htmlist.join(' ');
+    console.log(x)
+    return x
   };
 
 

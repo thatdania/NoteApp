@@ -24,15 +24,14 @@
 
   function noteListViewtakesnoteListArray(){
     var describe = "NoteListView takes in NoteList"
-    notelistDouble.addnote('hello')
+    notelistDouble.addnote('sillybutbillykadoodles')
     notelistDouble.returnallnotes();
-    assert.isTrue(describe, notelistView.viewlist, ['hello'])
+    assert.isTrue(describe, notelistView.viewlist, ['sillybutbillykadoodles'])
   };
 
   function noteListViewreturnsStringasHTML(){
-    var describe = "NoteListView reutns string as HTML"
-    notelistDouble.returnallnotes();
-    assert.isTrue(describe, notelistView.html(),"<li><div>hello</div></li>")
+    var describe = "NoteListView returns string as HTML"
+    assert.isEqual(describe, notelistView.html(),"<li><div> sillybutbillykadoodl </div></li>")
   };
 
 noteListViewtakesnoteListArray();
