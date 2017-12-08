@@ -1,7 +1,6 @@
 (function(exports){
   function NoteController(noteList){
     this.controlist = noteList
-    console.log(this.controlist)
   };
 
   NoteController.prototype.addingNote = function(note){

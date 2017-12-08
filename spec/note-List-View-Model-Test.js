@@ -9,7 +9,7 @@
   };
 
   NoteListDouble.prototype = {
-    addnote: function(string = null){
+    addnote: function(string){
       var noteDouble= new NoteDouble(string);
       this.list.push(noteDouble)
     },
@@ -19,10 +19,10 @@
     }
   };
 
-  var notelistDouble = new NoteListDouble
-  var notelistView = new NoteListView(notelistDouble)
 
   function noteListViewtakesnoteListArray(){
+    var notelistDouble = new NoteListDouble
+    var notelistView = new NoteListView(notelistDouble)
     var describe = "NoteListView takes in NoteList"
     notelistDouble.addnote('sillybutbillykadoodles')
     notelistDouble.returnallnotes();
@@ -30,16 +30,22 @@
   };
 
   function noteListViewreturnsStringasHTML(){
+    var notelistDouble = new NoteListDouble
+    var notelistView = new NoteListView(notelistDouble)
+    notelistDouble.addnote("sillybutbillykadoodles")
     var describe = "NoteListView returns string as HTML"
-    assert.isEqual(describe, notelistView.html(),"<li><div> sillybutbillykadoodl </div></li>")
+    assert.isEqual(describe, notelistView.html(),"<ul><li><div> sillybutbillykadoodl </div></li></ul>")
   };
-  //
-  // function noteListViewreturnsnonote(){
-  //   var describe = "NoteListView returns string as HTML"
-  //     notelistDouble.addnote()
-  //   assert.isEqual(describe, notelistView.html(),"<li><div></div></li>")
-  // };
+
+  function noteListViewreturnsnonote(){
+    var describe = "NoteListView returns string as HTML"
+    var notelistDouble = new NoteListDouble
+    var notelistView = new NoteListView(notelistDouble)
+    console.log(notelistView.html())
+    assert.isEqual(describe, notelistView.html(),"<ul></ul>")
+  };
 
 noteListViewtakesnoteListArray();
 noteListViewreturnsStringasHTML();
+noteListViewreturnsnonote();
 })(this);

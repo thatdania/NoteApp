@@ -44,7 +44,7 @@ var noteController = new NoteController(notelistDouble)
     var describe = "NoteController can change html"
     notelistDouble.returnallnotes();
     noteController.changeshtml();
-    assert.isEqual(describe, document.getElementById('app').innerHTML, "<li><div> hello </div></li>")
+    assert.isEqual(describe, document.getElementById('app').innerHTML, "<ul><li><div> hello </div></li></ul>")
 
   }
 
