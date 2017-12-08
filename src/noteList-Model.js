@@ -2,10 +2,12 @@
 
   function NoteList(){
     this.list = []
+    this.number = 0
   }
 
   NoteList.prototype.addnote = function(string){
-    var note = new Note(string)
+    this.number += 1
+    var note = new Note(string, this.number)
     return this.list.push(note)
   };
 

@@ -17,7 +17,18 @@
    assert.isTrue(describe, noteList.returnallnotes(), 'hello')
   };
 
+  function NoteListCanAddAUniqueAnId(){
+  var describe = "NoteList can add a unique id"
+  noteList.addnote('hello')
+  noteList.addnote('bye')
+  console.log(noteList.list[1])
+  assert.isTrue(describe, noteList.list[1].id, 2)
+
+
+  };
+
 NoteListisanArray();
 NoteListStoresNote();
 NoteListReturnsAllNote();
+NoteListCanAddAUniqueAnId();
 })(this);

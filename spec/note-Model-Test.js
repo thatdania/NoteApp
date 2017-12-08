@@ -1,5 +1,5 @@
 (function(exports){
-  var note = new Note('string')
+  var note = new Note('string', 0)
 
 function NoteModelCanBeInstantiated(){
   var describe = "String is an instant of note"
@@ -11,12 +11,15 @@ function NoteModelCanStoreNote(){
   assert.isTrue(describe, note.store() === 'string');
 };
 
-
-
+function NoteModelCanHaveAnId(){
+  var describe = 'Note can have an id'
+  assert.isTrue(describe, note.id === 0)
+};
 
 
 NoteModelCanBeInstantiated();
-NoteModelCanStoreNote()
+NoteModelCanStoreNote();
+NoteModelCanHaveAnId();
 })(this);
 
 
