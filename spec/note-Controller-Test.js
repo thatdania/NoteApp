@@ -2,8 +2,9 @@
 
 
 
-  function NoteDouble(string){
+  function NoteDouble(string, id){
     this.note = string
+    this.id = id
   };
 
   function NoteListDouble(){
@@ -12,7 +13,7 @@
 
   NoteListDouble.prototype = {
     addnote: function(string){
-    var noteDouble= new NoteDouble(string);
+    var noteDouble= new NoteDouble(string, 1);
     this.list.push(noteDouble)
     },
 
@@ -44,7 +45,7 @@ var noteController = new NoteController(notelistDouble)
     var describe = "NoteController can change html"
     notelistDouble.returnallnotes();
     noteController.changeshtml();
-    assert.isEqual(describe, document.getElementById('app').innerHTML, "<ul><li><div> hello </div></li></ul>")
+    assert.isEqual(describe, document.getElementById('app').innerHTML, '<ul><li><div><a href="#1"> hello </a></div></li></ul>')
 
   }
 

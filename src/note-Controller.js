@@ -14,6 +14,7 @@
   var render = noteListView.html()
   var final = document.getElementById('app');
   final.innerHTML = render;
+  console.log(final)
 }
 
 exports.NoteController = NoteController
